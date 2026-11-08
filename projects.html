@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects | Daniels Olubi Chukwuebuka</title>
+    <meta name="description" content="Project portfolio for Daniels Olubi Chukwuebuka." />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="projects">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">DOC</a>
+        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle colour theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-banner section-space reveal">
+        <div class="container narrow">
+          <p class="eyebrow">Portfolio</p>
+          <h1>Projects and practical interests.</h1>
+        </div>
+      </section>
+
+      <section class="section-space reveal">
+        <div class="container">
+          <div class="filter-bar" aria-label="Project categories">
+            <button class="filter-btn active" type="button" data-filter="all">All</button>
+            <button class="filter-btn" type="button" data-filter="academic">Academic</button>
+            <button class="filter-btn" type="button" data-filter="agriculture">Agriculture</button>
+            <button class="filter-btn" type="button" data-filter="data">Data</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="content-section section-space reveal">
+        <div class="container project-grid">
+          <article class="project-card" data-category="academic">
+            <div class="project-image">
+              <img src="assets/images/IMG_20221013_143554_576.jpg" alt="Academic task planner visual placeholder" />
+              <span>Academic project placeholder</span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Academic</p>
+              <h2>Academic Task Planner</h2>
+              <p>
+                An interactive academic task-management application designed to help students organise academic
+                responsibilities, track tasks and monitor completion.
+              </p>
+              <ul>
+                <li>JavaScript arrays</li>
+                <li>Functions</li>
+                <li>DOM manipulation</li>
+                <li>Task filtering and local storage</li>
+              </ul>
+              <a class="button primary" href="planner.html">Open planner</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="agriculture">
+            <div class="project-image">
+              <img src="assets/images/1000045276.jpg" alt="CitiFarmLad Agro Allied Ventures placeholder image" />
+              <span>Agricultural venture placeholder</span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Agriculture</p>
+              <h2>CitiFarmLad Agro Allied Ventures</h2>
+              <p>
+                My agricultural business venture reflects my interest in practical agricultural production,
+                irrigation, crop management and modern farming practices.
+              </p>
+              <ul>
+                <li>Crop management</li>
+                <li>Irrigation</li>
+                <li>Farm planning</li>
+                <li>Modern agriculture</li>
+              </ul>
+              <a class="button secondary" href="contact.html">Get in touch</a>
+              <a class="button primary" href="data-analysis.html">Explore production dashboard</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="data">
+            <div class="project-image">
+              <img src="assets/images/WhatsApp Image 2026-11-02 at 11.59.29.jpeg" alt="Data analysis demonstration visual placeholder" />
+              <span>Data sample placeholder</span>
+            </div>
+            <div class="project-body">
+              <p class="project-tag">Data</p>
+              <h2>Data Analysis Demonstration</h2>
+              <p>
+                A small sample data-analysis demonstration showing how data can be organised, processed and
+                summarised for insight. The dataset is clearly identified as a demonstration sample.
+              </p>
+              <ul>
+                <li>Sample dataset</li>
+                <li>Simple calculations</li>
+                <li>Summary insights</li>
+                <li>Chart visualisation</li>
+              </ul>
+              <a class="button primary" href="#data-demo">View sample analysis</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="data-demo" class="section-space reveal">
+        <div class="container data-demo-box">
+          <div class="section-heading">
+            <p class="eyebrow">Sample analysis</p>
+            <h2>Demonstration dataset only</h2>
+          </div>
+
+          <div class="data-table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Week</th>
+                  <th>Study Hours</th>
+                  <th>Task Completion</th>
+                  <th>Farm Activity Hours</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>5</td>
+                  <td>60%</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>7</td>
+                  <td>70%</td>
+                  <td>4</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>8</td>
+                  <td>75%</td>
+                  <td>5</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>9</td>
+                  <td>85%</td>
+                  <td>6</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="chart-box">
+            <div class="bar-group">
+              <div class="bar-label">Week 1</div>
+              <div class="bar" style="height: 60%"></div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">Week 2</div>
+              <div class="bar" style="height: 70%"></div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">Week 3</div>
+              <div class="bar" style="height: 75%"></div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">Week 4</div>
+              <div class="bar" style="height: 85%"></div>
+            </div>
+          </div>
+
+          <div class="summary-notes">
+            <p><strong>Sample finding:</strong> Study hours and task completion increased steadily across the month.</p>
+            <p><strong>Important note:</strong> This is demonstration data only and does not reflect real research or business performance.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year"></span> Daniels Olubi Chukwuebuka</p>
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="planner.html">Planner</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+  </body>
+</html>

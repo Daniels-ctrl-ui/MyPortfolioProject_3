@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A fictional agricultural production data analysis dashboard demonstrating crop yield calculations and charts."
+    />
+    <title>Agricultural Production Dashboard | Daniels Olubi Chukwuebuka</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/data-analysis.css" />
+  </head>
+  <body data-page="data-analysis">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">DOC</a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle colour theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-banner section-space reveal">
+        <div class="container dashboard-intro">
+          <p class="eyebrow">Data analysis project</p>
+          <h1>Agricultural Production Dashboard</h1>
+          <p class="dashboard-lead">
+            Explore a small crop-production dataset, compare yields and see how area and production relate.
+          </p>
+          <p class="fictional-notice">
+            Fictional demonstration data only — these values are not actual farm records.
+          </p>
+        </div>
+      </section>
+
+      <section class="section-space dashboard-section reveal" aria-labelledby="summary-heading">
+        <div class="container dashboard-container">
+          <div class="dashboard-section-heading">
+            <div>
+              <p class="eyebrow">At a glance</p>
+              <h2 id="summary-heading">Production summary</h2>
+            </div>
+            <div class="dashboard-controls">
+              <div class="control-field">
+                <label for="crop-filter">Filter crop</label>
+                <select id="crop-filter">
+                  <option value="all">All crops</option>
+                </select>
+              </div>
+              <div class="control-field">
+                <label for="sort-order">Sort records</label>
+                <select id="sort-order">
+                  <option value="production-desc">Production: high to low</option>
+                  <option value="production-asc">Production: low to high</option>
+                  <option value="yield-desc">Yield: high to low</option>
+                  <option value="yield-asc">Yield: low to high</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-grid" aria-live="polite">
+            <article class="summary-card">
+              <p class="summary-label">Total production</p>
+              <p class="summary-value" id="total-production">—</p>
+              <p class="summary-unit">kilograms</p>
+            </article>
+            <article class="summary-card">
+              <p class="summary-label">Cultivated area</p>
+              <p class="summary-value" id="total-area">—</p>
+              <p class="summary-unit">hectares</p>
+            </article>
+            <article class="summary-card">
+              <p class="summary-label">Average yield</p>
+              <p class="summary-value" id="average-yield">—</p>
+              <p class="summary-unit">kilograms per hectare</p>
+            </article>
+            <article class="summary-card">
+              <p class="summary-label">Highest-yielding crop</p>
+              <p class="summary-value crop-summary" id="highest-yielding-crop">—</p>
+              <p class="summary-unit" id="highest-yield-value">—</p>
+            </article>
+          </div>
+
+          <p id="dashboard-status" class="dashboard-status" role="status" aria-live="polite"></p>
+
+          <div class="charts-grid">
+            <article class="chart-panel">
+              <div class="chart-heading">
+                <h2>Production by crop</h2>
+                <p>Harvest quantity in kilograms</p>
+              </div>
+              <div class="chart-container">
+                <canvas id="production-chart" role="img" aria-label="Bar chart comparing production in kilograms by crop">
+                  Your browser does not support canvas charts.
+                </canvas>
+              </div>
+            </article>
+            <article class="chart-panel">
+              <div class="chart-heading">
+                <h2>Yield by crop</h2>
+                <p>Production per cultivated hectare</p>
+              </div>
+              <div class="chart-container">
+                <canvas id="yield-chart" role="img" aria-label="Bar chart comparing crop yields in kilograms per hectare">
+                  Your browser does not support canvas charts.
+                </canvas>
+              </div>
+            </article>
+          </div>
+
+          <section class="table-panel" aria-labelledby="crop-records-heading">
+            <div class="chart-heading">
+              <div>
+                <h2 id="crop-records-heading">Crop records</h2>
+                <p id="record-count">Showing all demonstration records</p>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table class="crop-table">
+                <caption>
+                  Fictional demonstration crop data and calculated yield
+                </caption>
+                <thead>
+                  <tr>
+                    <th scope="col">Crop</th>
+                    <th scope="col">Area (ha)</th>
+                    <th scope="col">Production (kg)</th>
+                    <th scope="col">Yield (kg/ha)</th>
+                  </tr>
+                </thead>
+                <tbody id="crop-table-body"></tbody>
+              </table>
+            </div>
+          </section>
+
+          <p class="calculation-note">
+            Yield = production (kg) ÷ cultivated area (ha). Average yield is total production divided by total
+            cultivated area for the currently displayed records.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year"></span> Daniels Olubi Chukwuebuka</p>
+        <div class="footer-links">
+          <a href="projects.html">Back to Projects</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
+    <script src="js/data-analysis.js"></script>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Daniels Olubi Chukwuebuka</title>
+    <meta name="description" content="Contact information and contact form for Daniels Olubi Chukwuebuka and CitiFarmLad Agro Allied Ventures." />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="contact">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">DOC</a>
+        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html">Academic Planner</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle colour theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-banner section-space reveal">
+        <div class="container narrow">
+          <p class="eyebrow">Contact</p>
+          <h1>Get in touch.</h1>
+        </div>
+      </section>
+
+      <section class="section-space reveal">
+        <div class="container contact-layout">
+          <div class="contact-panel">
+            <h2>Contact information</h2>
+            <div class="contact-list">
+              <div class="contact-item">
+                <h3>Personal email</h3>
+                <a href="mailto:olubidaniels13@gmail.com">olubidaniels13@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <h3>Business email</h3>
+                <a href="mailto:citifarmlad@gmail.com">citifarmlad@gmail.com</a>
+              </div>
+              <div class="contact-item">
+                <h3>Phone numbers</h3>
+                <p><a href="tel:+2349020340840">+2349020340840</a></p>
+                <p><a href="tel:+2347020641341">+2347020641341</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-panel">
+            <h2>Send a message</h2>
+            <form id="contact-form" novalidate>
+              <div class="form-field">
+                <label for="full-name">Full name</label>
+                <input id="full-name" name="fullName" type="text" />
+                <small class="error-message" data-error-for="full-name"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="email">Email address</label>
+                <input id="email" name="email" type="email" />
+                <small class="error-message" data-error-for="email"></small>
+              </div>
+
+              <div class="form-field">
+                <label for="phone">Phone number</label>
+                <input id="phone" name="phone" type="tel" placeholder="Digits only, no spaces or + sign" />
+                <small class="hint">Enter digits only, without spaces, brackets or the international plus sign.</small>
+                <small class="error-message" data-error-for="phone"></small>
+              </div>
+
+              <button class="button primary" type="submit">Validate form</button>
+              <p id="form-success" class="success-message" aria-live="polite"></p>
+            </form>
+            <p class="demo-note">
+              This form is a frontend demonstration only. A backend or email service would be needed for real message delivery.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year"></span> Daniels Olubi Chukwuebuka</p>
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="planner.html">Planner</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>

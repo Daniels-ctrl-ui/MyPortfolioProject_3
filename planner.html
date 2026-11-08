@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Planner | Daniels Olubi Chukwuebuka</title>
+    <meta name="description" content="Academic planner for Daniels Olubi Chukwuebuka." />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="planner">
+    <header class="site-header">
+      <div class="container nav-wrap">
+        <a class="brand" href="index.html">DOC</a>
+        <button class="menu-toggle" aria-label="Open navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="site-nav" aria-label="Main navigation">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Me</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="planner.html" class="active">Academic Planner</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Toggle colour theme">
+          <span class="theme-icon">☀️</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-banner section-space reveal">
+        <div class="container narrow">
+          <p class="eyebrow">Academic planner</p>
+          <h1>Manage assignments, study tasks and academic goals.</h1>
+        </div>
+      </section>
+
+      <section class="section-space reveal">
+        <div class="container planner-layout">
+          <aside class="planner-panel">
+            <h2>Add a task</h2>
+            <form id="task-form" novalidate>
+              <div class="form-field">
+                <label for="task-title">Task title</label>
+                <input id="task-title" type="text" name="taskTitle" placeholder="Example: Complete data analysis assignment" required />
+              </div>
+
+              <div class="form-field">
+                <label for="task-priority">Priority</label>
+                <select id="task-priority" name="taskPriority">
+                  <option value="High">High</option>
+                  <option value="Medium" selected>Medium</option>
+                  <option value="Low">Low</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="task-date">Due date</label>
+                <input id="task-date" type="date" name="taskDate" />
+              </div>
+
+              <button class="button primary" type="submit">Add task</button>
+            </form>
+          </aside>
+
+          <div class="planner-panel large-panel">
+            <div class="task-header-row">
+              <h2>Task list</h2>
+              <div class="filter-group" aria-label="Task filters">
+                <button class="task-filter active" type="button" data-filter="all">All</button>
+                <button class="task-filter" type="button" data-filter="pending">Pending</button>
+                <button class="task-filter" type="button" data-filter="completed">Completed</button>
+              </div>
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-label">Total</span>
+                <strong id="total-tasks">0</strong>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Pending</span>
+                <strong id="pending-tasks">0</strong>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Completed</span>
+                <strong id="completed-tasks">0</strong>
+              </div>
+            </div>
+
+            <ul id="task-list" class="task-list" aria-live="polite"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p>&copy; <span id="year"></span> Daniels Olubi Chukwuebuka</p>
+        <div class="footer-links">
+          <a href="projects.html">Projects</a>
+          <a href="contact.html">Contact</a>
+          <a href="about.html">About</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/planner.js"></script>
+  </body>
+</html>
